@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from peewee import *
 from playhouse.shortcuts import model_to_dict , dict_to_model
 
-db = PostgresqlDatabase('survivor', user='Admin', password='',host='localhost',port=5432)
+db = PostgresqlDatabase('survivor', user='Admin', password='', host='localhost', port=5432)
 
 class BaseModel(Model):
   class Meta:
@@ -109,5 +109,5 @@ def player_endpoint(id=None):
   if request.method == 'DELETE':
     Player.delete().where(Player.id == id).execute()
     return f'Player {id} has been deleted.'
-  
-  app.run(debug = True, port = 3000)
+
+app.run(debug = True, port = 5050)

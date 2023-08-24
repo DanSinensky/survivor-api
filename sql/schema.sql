@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS seasons;
-DROP TABLE IF EXISTS tribes;
-DROP TABLE IF EXISTS players;
+DROP TABLE IF EXISTS season;
+DROP TABLE IF EXISTS tribe;
+DROP TABLE IF EXISTS player;
 
-CREATE TABLE seasons (
+CREATE TABLE season (
   id SERIAL PRIMARY KEY,
   number INTEGER,
   name VARCHAR(255),
@@ -14,13 +14,13 @@ CREATE TABLE seasons (
   winner VARCHAR(255)
 );
 
-CREATE TABLE tribes (
+CREATE TABLE tribe (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   season_id INTEGER
 );
 
-CREATE TABLE players (
+CREATE TABLE player (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   age_during_game INTEGER,
