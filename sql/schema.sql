@@ -8,10 +8,17 @@ CREATE TABLE seasons (
   name VARCHAR(255),
   location VARCHAR(255),
   winner VARCHAR(255)
-)
+);
 
 CREATE TABLE tribes (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   season_id INTEGER
-)
+);
+
+CREATE TABLE players (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  placement VARCHAR(255),
+  tribe_id INTEGER
+);
